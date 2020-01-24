@@ -1,4 +1,79 @@
 body {
-    background-color: aqua;
+    background-color: #C7F0BD ;
+}
 
+.petCard{
+    width: 300px;
+    margin: 20px;
+    background-color: #315659;
+    padding: 10px;
+    box-shadow: 10px 8px 6px -6px white;
+    border-style: double;
+    border-radius: 25px;
+    color: white;
+}
+   
+.buttons{
+    justify-content: space-around;
+    display: flex;
+    max-width: 50%;
+    margin: 0 auto;
+    border-radius: 25px;
+   
+}
+.petColor {
+    font-family:'Open Sans Condensed', sans-serif;
+    text-align: center;
+
+
+}
+
+.petSkill{
+    font-family: 'Open Sans Condensed', sans-serif;
+    text-align: center;
+}
+
+.petName {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+
+
+}
+
+.petType {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+
+}
+
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 1100px;
+}
+
+
+
+img {
+    margin: 0 auto;
+    display: block;
+    max-width: 250px;
+
+}
+
+.title{
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    
+}
+
+.Cats,.Dog {
+    border: 1px solid #3498db;
+    background: none;
+    font-size: 20px;
+    padding: 10px 20px;
+    font-family: "montserrat";
+    cursor: pointer;
+    margin: 10px;
 }
