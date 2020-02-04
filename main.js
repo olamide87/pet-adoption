@@ -241,6 +241,7 @@ const pets = [
     pets.forEach((pet) => {
       if(pet.type == buttonId){
         newPets.push(pet);
+        console.log(newPets);
       }
     });
 
