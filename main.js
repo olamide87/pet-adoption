@@ -130,7 +130,7 @@ const pets = [
       color: "Blue",
       specialSkill: "Listens attentively to boring stories.",
       type: "dog",
-      imageUrl: "http://dailynewsdig.com/wp-content/uploads/2014/03/Creative-And-Funny-Dog-Stock-Photography-Pictures-2.jpg"
+      imageUrl: ""
     },
     {
       name: "Spooky",
@@ -151,7 +151,7 @@ const pets = [
       color: "Orange",
       specialSkill: "Is comfortable with jokes about his receding hairline.",
       type: "cat",
-      imageUrl: "http://funnyanimalphoto.com/wp-content/uploads/2013/08/cat_caught_mouse_thegatewaypundit.jpg"
+      imageUrl: ""
     },
     {
       name: "Buddy",
@@ -172,7 +172,7 @@ const pets = [
       color: "Red",
       specialSkill: "Knows the words to 4 rap songs.",
       type: "cat",
-      imageUrl: "http://funbk.s3.amazonaws.com/wp-content/uploads/2016/06/funny-cat-video-which-will-make-you-laugh-louder.jpg"
+      imageUrl: ""
     },
     {
       name: "Bubba",
@@ -200,14 +200,14 @@ const pets = [
       color: "Green",
       specialSkill: "Gives hugs with appropriate pressure and for the right length of time.",
       type: "cat",
-      imageUrl: "http://img.izismile.com/img/img2/20090219/cats_02.jpg"
+      imageUrl: ""
     },
     {
       name: "Lucy",
       color: "Red",
       specialSkill: "Doesn’t get weirded out by the word “moist.”",
       type: "dino",
-      imageUrl: "http://lsae2.iypcdn.com/static//modules/uploads/photos/language1/dino-live-22.jpg?119"
+      imageUrl: ""
     }
   ];
 
@@ -217,7 +217,7 @@ const pets = [
     selectedDiv.innerHTML = textToPrint;
   };
   
-  const buildPetCards = () => {
+  const buildPetCards = (array) => {
     let domString = '';
     for(let i = 0; i < pets.length; i++) {
         domString += `<div class="petCard">`;
@@ -231,4 +231,37 @@ const pets = [
     printToDom('Pet-barn', domString);
   };
   
-  buildPetCards();
+  
+
+  const buttonClick = (e) => {
+    console.log(e.target.id)
+    const buttonId = e.target.id;
+    const newPets = [];
+
+    pets.forEach((pet) => {
+      if(pet.type == buttonId){
+        newPets.push(pet);
+      }
+    });
+
+    if(buttonId == 'all') {
+      buildPetCards(pets);
+    } else{ 
+      buildPetCards(newPets);
+    }
+  }
+
+  const eventListener = () => {
+    document.getElementById('cat').addEventListener('click',buttonClick);
+    document.getElementById('dog').addEventListener('click',buttonClick);
+    document.getElementById('dino').addEventListener('click',buttonClick);
+    document.getElementById('all').addEventListener('click',buttonClick);
+
+  }
+
+  const init = () => {
+    eventListener();
+    buildPetCards(pets);
+  }
+
+  init();

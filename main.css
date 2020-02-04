@@ -51,6 +51,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     width: 1100px;
+    
 }
 
 
@@ -68,12 +69,52 @@ img {
     
 }
 
-.Cats,.Dog {
+.Cats {
     border: 1px solid #3498db;
-    background: none;
+    border-radius: 20px;
+    background: red;
     font-size: 20px;
     padding: 10px 20px;
     font-family: "montserrat";
     cursor: pointer;
     margin: 10px;
+}
+
+.Dogs {
+    border: 1px solid #3498db;
+    border-radius: 20px;
+    background: #95C623;
+    font-size: 20px;
+    padding: 10px 20px;
+    font-family: "montserrat";
+    cursor: pointer;
+    margin: 10px;  
+
+}
+
+.Dinos {
+    border: 1px solid #3498db;
+    border-radius: 20px;
+    background: orange;
+    font-size: 20px;
+    padding: 10px 20px;
+    font-family: "montserrat";
+    cursor: pointer;
+    margin: 10px;
+}
+
+.All {
+    border: 1px solid #3498db;
+    border-radius: 20px;
+    background: blue;
+    font-size: 20px;
+    padding: 10px 20px;
+    font-family: "montserrat";
+    cursor: pointer;
+    margin: 10px;
+}
+
+#Pet-Barn {
+    text-align: center;
+
 }
